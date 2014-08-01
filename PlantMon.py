@@ -18,6 +18,8 @@ ALARM_SETPOINT = 10
 ALARM_CLEARPOINT = 80
 
 PUSHBULLET_API = ''
+with open('../pushbullet.apikey', 'r') as f:
+	PUSHBULLET_API = f.read().strip()
 
 class WaterSensorLog(peewee.Model):
 	timestamp = peewee.DateTimeField(formats='%Y-%m-%d %H:%M:%S')
