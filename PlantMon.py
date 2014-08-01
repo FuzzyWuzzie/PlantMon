@@ -46,6 +46,7 @@ class PlantMon(object):
 		self.ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=5)
 
 		# set up the data collection
+		self._sensorNames = ['Tomatoes', 'Grape Vines', 'Petunias', 'Grass', 'Spruce', '?']
 		self.lastUpdate = datetime.now()
 		self.vals = [0, 0, 0, 0, 0, 0]
 		self.calibrations = [
@@ -116,10 +117,12 @@ class PlantMon(object):
 					success = None
 					push = None
 					if hasAlarms:
-						msg = 'The following sensors are in alarm:'
+						msg = 'The following sensors are in alarm: '
+						plants = []
 						for i in range(0, 6):
 							if newAlarms[i]:
-								msg += ' ' + str(i)
+								plants.append(self._sensorNames[i])
+						msg += ', '.join(plants)
 						success, push = self.pb.push_note("PlantMon: PLANT ALARM", msg)
 					else:
 						success, push = self.pb.push_note("PlantMon: Alarms Cleared", 'All plant alarms have been cleared!')
@@ -160,6 +163,11 @@ class PlantMon(object):
 	@cherrypy.tools.json_out()
 	def alarms(self):
 		return self.existingAlarms
+
+	@cherrypy.expose
+	@cherrypy.tools.json_out()
+	def sensorNames(self):
+		return self._sensorNames
 
 	@cherrypy.expose
 	@cherrypy.tools.json_out()
