@@ -1,0 +1,133 @@
+@import "bootstrap/bootstrap.less";
+@import "font-awesome/font-awesome.less";
+
+//@import "custom/compatibility.less";
+
+//@import "bootstrap-tree/bootstrap-tree.less";
+//@import "datepicker/datepicker.less";
+
+@theme: "Lumen";
+
+@import "themes/@{theme}/bootswatch.less";
+@import "themes/@{theme}/variables.less";
+
+@import "custom/main.less";
+@import "custom/variables.less";
+
+.slimpadding {
+	padding: 0.25em !important;
+	margin: 0 !important;
+}
+
+.breadcrumb {
+	margin-bottom: 0 !important;
+}
+
+.explorer-icon {
+	text-align: center;
+	width: 125px;
+	height: 125px;
+	float: left;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	position: relative;
+}
+
+.explorer-hover {
+	display: none;
+	position: absolute;
+	top: 1em;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*.explorer-icon:hover .explorer-hover {
+	display: block;
+}*/
+
+.explorer-icon a {
+	display: block;
+}
+
+.explorer-hover a {
+	display: inline-block;
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+	color: #ffffff;
+}
+
+.fa-folder {
+	color: @brand-primary;
+	font-size: 5em;
+}
+
+.fa-file-word-o {
+	color: @brand-primary;
+	font-size: 5em;
+}
+
+.fa-file-pdf-o {
+	color: @brand-danger;
+	font-size: 5em;
+}
+
+.fa-file-excel-o {
+	color: @brand-success;
+	font-size: 5em;
+}
+
+.fa-file-powerpoint-o {
+	color: @brand-danger;
+	font-size: 5em;
+}
+
+.fa-file-archive-o {
+	color: @brand-warning;
+	font-size: 5em;
+}
+
+.fa-file-image-o {
+	color: @gray;
+	font-size: 5em;
+}
+
+.fa-file-video-o {
+	color: @gray;
+	font-size: 5em;
+}
+
+.fa-file-audio-o {
+	color: @gray;
+	font-size: 5em;
+}
+
+.fa-file-code-o {
+	color: @gray;
+	font-size: 5em;
+}
+
+.fa-file-text-o {
+	color: @gray;
+	font-size: 5em;
+}
+
+.fa-file-o {
+	color: @gray;
+	font-size: 5em;
+}
+
+#meta-table th {
+	text-align: right;
+}
+
+#meta-table th::after {
+	content: ":";
+}
+
+#meta-table td {
+	width: 100%;
+}

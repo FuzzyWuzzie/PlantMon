@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Plant Monitor</title>
+
+		<!-- Bootstrap -->
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/easypiechart.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Hammer double tap -->
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Water Level</h3>
+						</div>
+						<table class="table">
+							<tr>
+								<td class="alarm-cell" id="sensor-0-alarm">Tomatoes</td>
+								<td class="alarm-cell" id="sensor-1-alarm">Grape Vines</td>
+								<td class="alarm-cell" id="sensor-2-alarm">Petunias</td>
+								<td class="alarm-cell" id="sensor-3-alarm">Grass</td>
+								<td class="alarm-cell" id="sensor-4-alarm">Spruce</td>
+								<!--<td class="alarm-cell" id="sensor-5-alarm">-</td>-->
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Tomatoes</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 gauge-container" id="sensor-0-gauge-container"></div>
+								<div class="col-xs-12 col-sm-9 line-container" id="sensor-0-line-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Grape Vines</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 gauge-container" id="sensor-1-gauge-container"></div>
+								<div class="col-xs-12 col-sm-9 line-container" id="sensor-1-line-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Petunias</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 gauge-container" id="sensor-2-gauge-container"></div>
+								<div class="col-xs-12 col-sm-9 line-container" id="sensor-2-line-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Grass</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 gauge-container" id="sensor-3-gauge-container"></div>
+								<div class="col-xs-12 col-sm-9 line-container" id="sensor-3-line-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Spruce</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12 col-sm-3 gauge-container" id="sensor-4-gauge-container"></div>
+								<div class="col-xs-12 col-sm-9 line-container" id="sensor-4-line-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/moment.js"></script>
+		<script src="js/jquery.easypiechart.js"></script>
+		<script src="js/highcharts-custom.js"></script>
+
+		<script src="js/auto-update.js"></script>
+	</body>
+</html>
